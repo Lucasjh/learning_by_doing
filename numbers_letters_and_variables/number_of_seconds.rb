@@ -23,4 +23,4 @@ puts "  #{seconds_in_week} seconds in a week,"
 print "That means when you turn 20, you've "
 puts "been alive for #{seconds_in_year * 20} seconds,"
 print 'and if you make it to 100, you will '
-puts "have lived #{seconds_in_year * 100}. Make them count! "
+puts "have lived #{seconds_in_year * 100} seconds. Make them count!"
