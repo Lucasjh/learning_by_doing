@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 n = 99
-
 bot = 'bottles'
 
 def song(bot, n)
@@ -30,7 +29,8 @@ def song(bot, n)
     puts "Take one down and pass it around, no more #{bot} of beer on the wall."
     puts ''
     puts 'No more bottles of beer on the wall, no more bottles of beer. '
-    puts "Go to the store and buy some more, 99 #{bot} of beer on the wall."
+    puts "Go to the store and buy some more, #{n+99} #{bot}" +
+     " of beer on the wall."
   end
 end
 
