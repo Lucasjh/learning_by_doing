@@ -5,25 +5,24 @@
 # better, using return instead of abort.
 # http://mark.kreyman.com/76/ruby/99-bottles-of-beer-ruby-methods-and-recursion/
 
-def pluralize(n, text)
-  return text + 's' if n != 1
+def pluralize(bottles, text)
+  return text + 's' if bottles != 1
   text
 end
 
-def bottles_on_the_wall(n)
-  if n.zero?
-    print("No more bottles of beer on the wall, no more bottles of beer.
-    Go to the store and buy some more, #{n + 99} bottles of beer on the wall.")
+def bottles_on_the_wall(bottles)
+  if bottles.zero?
+    print("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall.")
     return
   end
-  puts "#{n} #{pluralize(n, 'bottle')} of beer on the wall,
-    #{n} #{pluralize(n, 'bottle')} of beer.
-    Take one down and pass it around, #{n != 1 ? (n - 1) : 'no more'}
-    #{pluralize(n - 1, 'bottle')} of beer on the wall.\n\n"
-  bottles_on_the_wall(n - 1)
+  puts "#{bottles} #{pluralize(bottles, 'bottle')} of beer on the wall,
+    #{bottles} #{pluralize(bottles, 'bottle')} of beer.
+    Take one down and pass it around, #{bottles != 1 ? (bottles - 1) : 'no more'}
+    #{pluralize( bottles - 1, 'bottle')} of beer on the wall."
+  bottles_on_the_wall(bottles - 1)
 end
 
-n = 99
-bottles_on_the_wall(n)
+bottles = 99
+bottles_on_the_wall(bottles)
 
-# return if n.zero?
+# return if bottles.zero?
