@@ -8,7 +8,7 @@ deca_reject = deca.reject { |a| a < 9 }
 empty_a = (deca - deca).length
 
 puts deca.join('...') + '...'
-puts 'T-' + deca.reverse.join(', ') + '... BLASTOFF!'
+puts 'T-' + deca.reverse.join(', ') + '...  BLASTOFF!'
 puts "The last element is #{deca.last}"
 puts "The first element is #{deca.first}"
 puts "The third element is #{deca[2]}"
