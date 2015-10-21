@@ -12,7 +12,7 @@ puts 'T-' + deca.reverse.join(', ') + '...  BLASTOFF!'
 puts "The last element is #{deca.last}"
 puts "The first element is #{deca.first}"
 puts "The third element is #{deca[2]}"
-puts "The element with the index of 3 is #{deca[3]}"
+puts "The element with an index of 3 is #{deca[3]}"
 puts "The second from last element is #{deca[8]}"
 puts 'The first four elements are ' + "'" + deca.take(4) * ',' + "'"
 puts "If we delete 5, 6, and 7 from the array, we're left with #{deca_minus}"
