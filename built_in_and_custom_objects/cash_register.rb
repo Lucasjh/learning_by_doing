@@ -34,4 +34,4 @@ class CashRegister
   end
 end
 
-puts "Welcome to things'r'us. Type 'register = CashRegister.new' to begin the transaction."
+register = CashRegister.new
