@@ -1,10 +1,8 @@
-#!/usr/bin/env ruby
-
 class CashRegister
   attr_reader :total
 
   def initialize
-    @total = 0.0
+    @total = 0.00
     puts ''
     puts 'Your total is $0.00'
     puts ''
@@ -25,13 +23,16 @@ class CashRegister
       puts "Your new total is $#{@total}"
     elsif @total == 0
       puts "Thank you, come again!"
-      @total = 0.0
+      @total = 0.00
     else
       @total < 0
       puts "Your change is $#{@total}"
-      @total = 0.0
+      @total = 0.00
     end
   end
 end
 
 register = CashRegister.new
+
+puts register.total
+
