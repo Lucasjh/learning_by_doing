@@ -1,16 +1,11 @@
 class CashRegister
-  attr_reader :total
 
   def initialize
     @total = 0.00
-    puts ''
-    puts 'Your total is $0.00'
-    puts ''
-    puts 'Actions:'
-    puts "'register.purchase(float_number_here)' for a purchase."
-    puts "'register.total' to check the current total."
-    puts "'register.pay' to pay balance."
-    puts''
+  end
+
+  def total
+    sprintf('%.2f', @total)
   end
 
   def purchase(item_value)
@@ -20,19 +15,16 @@ class CashRegister
   def pay(amount)
     @total -= amount
     if @total > 0
-      puts "Your new total is $#{@total}"
+      puts "Your new total is $#{sprintf('%.2f', @total)}"
     elsif @total == 0
-      puts "Thank you, come again!"
       @total = 0.00
     else
       @total < 0
-      puts "Your change is $#{@total}"
+      puts "Your change is $#{sprintf('%.2f', @total.abs)}"
       @total = 0.00
     end
   end
 end
 
 register = CashRegister.new
-
-puts register.total
 
